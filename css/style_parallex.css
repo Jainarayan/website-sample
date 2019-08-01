@@ -1,0 +1,216 @@
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.background-wrapper {
+	position: relative;
+	-webkit-perspective: 4000px;
+	perspective: 4000px;
+	height:780px !important;
+}
+
+.floating-background {
+	position: relative;
+	top: 0;
+	left: 0;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+}
+.floating-background.is-absolute {
+	position: absolute;
+}
+.floating-background img, .floating-background span {
+	display: block;
+	width: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-color: rgba(255, 255, 255, 0.01);
+}
+.floating-background img:not(:first-child) {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.floating-background img:first-child {
+	-webkit-transform: translateZ(50px);
+	-ms-transform: translateZ(50px);
+	transform: translateZ(50px);
+	opacity:0.2;
+	margin-left: -7%;
+}
+.floating-background img:nth-child(2) {
+	width:10%;
+	top:38%;
+	left:10.5%;
+	-webkit-transform: translateZ(100px);
+	-ms-transform: translateZ(100px);
+	transform: translateZ(100px);
+}
+.floating-background img:nth-child(3) {
+	width: 6.5%;
+    top: 51.6%;
+    left: 7%;
+	-webkit-transform: translateZ(150px);
+	-ms-transform: translateZ(150px);
+	transform: translateZ(150px);
+}
+.floating-background img:nth-child(4) {
+	width: 5.5%;
+    top: 50%;
+    left: 33%;
+	-webkit-transform: translateZ(200px);
+	-ms-transform: translateZ(200px);
+	transform: translateZ(200px);
+}
+.floating-background img:nth-child(5) {
+	width: 6.5%;
+    top: 53%;
+    left:25%;
+	-webkit-transform: translateZ(250px);
+	-ms-transform: translateZ(250px);
+	transform: translateZ(250px);
+}
+.floating-background img:nth-child(6) {
+	width: 5.5%;
+    top: 40%;
+    left: 21.6%;
+	-webkit-transform: translateZ(300px);
+	-ms-transform: translateZ(300px);
+	transform: translateZ(300px);
+}
+.floating-background img:nth-child(7) {
+	width: 6%;
+    top: 46%;
+    left: 21.8%;
+	-webkit-transform: translateZ(350px);
+	-ms-transform: translateZ(350px);
+	transform: translateZ(350px);
+}
+.floating-background span:nth-child(8) {
+	font-family: LatoBold;
+    font-size: 7em;
+    position: absolute;
+    top: 31%;
+    color: #c3c2f9;
+	-webkit-transform: translateZ(400px);
+	-ms-transform: translateZ(400px);
+	transform: translateZ(400px);
+}
+.floating-background span:nth-child(9) {
+	font-family: LatoRegular;
+    font-size: 3em;
+    position: absolute;
+    top: 28%;
+    color: #56aaff;
+	-webkit-transform: translateZ(450px);
+	-ms-transform: translateZ(450px);
+	transform: translateZ(450px);
+}
+.floating-background span:nth-child(10) {
+	font-family: LatoLight;
+    font-size: 2em;
+    position: absolute;
+    top: 47%;
+    left: 6%;
+    color: #56aaff;
+	-webkit-transform: translateZ(500px);
+	-ms-transform: translateZ(500px);
+	transform: translateZ(500px);
+}
+.floating-background span:nth-child(11) {
+	font-family: LatoLight;
+    font-size: 2.7em;
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    color: #90a08e;
+	-webkit-transform: translateZ(550px);
+	-ms-transform: translateZ(550px);
+	transform: translateZ(550px);
+}
+.floating-background span:nth-child(12) {
+	font-family: LatoBold;
+    font-size: 2.0em;
+    position: absolute;
+    top: 53%;
+    left: -2%;
+    color: #fcc2c4;
+	-webkit-transform: translateZ(600px);
+	-ms-transform: translateZ(600px);
+	transform: translateZ(600px);
+}
+.floating-background span:nth-child(13) {
+	font-family: LatoRegular;
+    font-size: 1.4em;
+    position: absolute;
+    top: 47%;
+    left: 0;
+    color: #ED1C24;
+	letter-spacing: .5em;
+	-webkit-transform: translateZ(650px);
+	-ms-transform: translateZ(650px);
+	transform: translateZ(650px);
+}
+
+
+.no-preserve-3d .floating-background {
+	position: relative;
+}
+
+.skrollr-desktop body {
+    height:100% !important;
+}
+
+#skrollr-body {
+    height:100%;
+    position:relative;
+    overflow: hidden;
+}
+
+.parallax-image.skrollable-between {
+    display:block;
+}
+
+.no-skrollr .parallax-image-wrapper {
+    display:none !important;
+}
+
+.parallax-image-wrapper {
+    position:fixed;
+    left:0;
+    width:100%;
+    overflow:hidden;
+
+    height:80vh;
+    top:-80vh;
+}
+
+
+.parallax-image {
+    display:none;
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+
+    height:100vh;
+    top:0;
+}
+
+
+.parallax-image.skrollable-between {
+    display:block;
+}
+
+.no-skrollr .parallax-image-wrapper {
+    display:none !important;
+}
+
