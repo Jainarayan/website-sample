@@ -1,0 +1,53 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* LOWER RESOLUTIONS ------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:767px)
+{
+	/* HEADER SECTION ---------------------------------------------------------------------*/
+	header{ padding-left:0px; }
+	.hlogo_main a{ font-size:25px; }
+	.navigation{ margin-top:-40px; padding:0; border:0; }
+	.nav li a{ padding:20px 10px !important; }
+	.nav li:last-child a{ padding-right:10px !important; margin-right:15px; }
+	.navbar-header{ margin:0; margin-right:-14px; background:transparent; }
+	.navbar-collapse{ width:200px; background:#191919; box-shadow:none; }
+	.navbar-brand{ display:none !important;}
+	/* BANNER SECTION ---------------------------------------------------------------------*/
+	.banner_main{ height:auto;}
+	.banner_section h1{ font-size:1.5em; line-height:50px; }
+	.banner_section img{ transform:scale(0.5);}
+	/* ABOUTUS/LISTING SECTION ------------------------------------------------------------*/	
+	.aboutMain, .blogMain{ padding:45px 0%;}
+	.listingStyle img{ height:auto;}
+	/* BLOG SECTION -----------------------------------------------------------------------*/	
+	.viewBtn{ display:table; margin:20px auto; }
+	/* FOOTER SECTION ---------------------------------------------------------------------*/	
+	.formStyle{ margin-left:10px; }
+	.socialLinks{ margin-left:5%; }
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* HIGHER RESOLUTIONS -----------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width:768px) and (max-width:991px)
+{
+	.container{ width:100%;}
+	.hlogo_main a{ font-size:23px; }
+	.navbar-collapse{ padding-left:0;}
+	.aboutMain, .blogMain{ padding:45px 0%;}
+	.socialLinks a{ width:22.35%;}
+}
+@media screen and (min-width:992px) and (max-width:1199px)
+{
+	.container{ width:100%;}
+	.hlogo_main a{ font-size:34px; }	
+	.aboutMain, .blogMain{ padding:45px 10%;}
+	.socialLinks a{ width:23%;}
+}
+@media screen and (min-width:1200px)
+{
+	.container{ width:100%;}
+	.socialLinks a{ width:23.2%;}
+}
+@media screen and (min-width:1366px){
+	.socialLinks a{ width:23.5%;}
+}
