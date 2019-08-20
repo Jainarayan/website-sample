@@ -1,4 +1,8 @@
 
+/* $(window).scroll(lazy);
+   */
+   /*  lazy();
+ */
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('body').on('click', '.page-scroll a', function(event) {
@@ -26,68 +30,77 @@ $('body').scrollspy({
     target: '.navbar-fixed-top'
 })
 
+
+/* 
+            $(window).scroll(function() {
+                if ($(".service-content").height() <= ($(window).height() + $(window).scrollTop())) {
+                    $(".service-content").css("display","block");
+                }else {
+                    $(".service-content").css("display","none");
+                }
+            }); */
+
+
+
+/*  $(function() {
+	 $('#1').lazy({
+		bind: "event"
+	});
+	
+} */
+
+$(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.service-content').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},1000);
+                    
+            }
+            
+        }); 
+		
+});
+
+$(window).scroll( function(){	
+  var scroll = $(window).scrollTop();
+	/* console.log(scroll); */
+  $(".parallel-img").css({
+
+    width: (100 + scroll/5)  + "%",
+
+    top: -(scroll/10)  + "%",
+
+    "-webkit-filter": "blur(" + (scroll/100) + "px)",
+
+    filter: "blur(" + (scroll/100) + "px)"
+    
+    });
+});
+	
+	
+
+
+
+	
+
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-$("#html5modal1").on('hidden.bs.modal', function (e) {
-	$("#html5modal1 iframe").attr("src", $("#html5modal1 iframe").attr("src"));
-});
-$("#html5modal4").on('hidden.bs.modal', function (e) {
-	$("#html5modal4 iframe").attr("src", $("#html5modal4 iframe").attr("src"));
-});
-$("#html5modal5").on('hidden.bs.modal', function (e) {
-	$("#html5modal5 iframe").attr("src", $("#html5modal5 iframe").attr("src"));
-});
-$("#html5modal6").on('hidden.bs.modal', function (e) {
-	$("#html5modal6 iframe").attr("src", $("#html5modal6 iframe").attr("src"));
-});
-
-$("#animation1").on('hidden.bs.modal', function (e) {
-	$("#animation1 iframe").attr("src", $("#animation1 iframe").attr("src"));
-});
-
-
-$("#animation2").on('hidden.bs.modal', function (e) {
-	$("#animation2 iframe").attr("src", $("#animation2 iframe").attr("src"));
-});	
-$("#animation3").on('hidden.bs.modal', function (e) {
-	$("#animation3 iframe").attr("src", $("#animation3 iframe").attr("src"));
-});
-$("#animation4").on('hidden.bs.modal', function (e) {
-	$("#animation4 iframe").attr("src", $("#animation4 iframe").attr("src"));
-});
-$("#animation5").on('hidden.bs.modal', function (e) {
-	$("#animation5 iframe").attr("src", $("#animation5 iframe").attr("src"));
-});
-$("#animation6").on('hidden.bs.modal', function (e) {
-	$("#animation6 iframe").attr("src", $("#animation6 iframe").attr("src"));
-});
-$("#animation7").on('hidden.bs.modal', function (e) {
-	$("#animation7 iframe").attr("src", $("#animation7 iframe").attr("src"));
-});
-$("#animation8").on('hidden.bs.modal', function (e) {
-	$("#animation8 iframe").attr("src", $("#animation8 iframe").attr("src"));
-});
-$("#animation9").on('hidden.bs.modal', function (e) {
-	$("#animation9 iframe").attr("src", $("#animation9 iframe").attr("src"));
-});
-$("#animation10").on('hidden.bs.modal', function (e) {
-	$("#animation10 iframe").attr("src", $("#animation10 iframe").attr("src"));
-});
-$("#animation11").on('hidden.bs.modal', function (e) {
-	$("#animation11 iframe").attr("src", $("#animation11 iframe").attr("src"));
-});
-$("#animation12").on('hidden.bs.modal', function (e) {
-	$("#animation12 iframe").attr("src", $("#animation12 iframe").attr("src"));
-});
-$("#animation13").on('hidden.bs.modal', function (e) {
-	$("#animation13 iframe").attr("src", $("#animation13 iframe").attr("src"));
-});
-$("#animation14").on('hidden.bs.modal', function (e) {
-	$("#animation14 iframe").attr("src", $("#animation14 iframe").attr("src"));
-});	
+$('.navbar-toggle').mouseover(function(){
+	$('.icon-bar').css('background-color', '#fff');
+})
+$('.navbar-toggle').mouseout(function(){
+	$('.icon-bar').css('background-color', '#e50c14');
+})
 
 jQuery(document).ready(function($){
 	//define store some initial variables
@@ -171,6 +184,26 @@ jQuery(document).ready(function($){
 			'transform': 'rotateX(' + rotateX + 'deg' + ') rotateY(' + rotateY + 'deg' + ') translateZ(0)',
 		});
 	}
+	$(".paroller-right, [data-paroller-factor]").paroller({
+		factor: 0.2,            // multiplier for scrolling speed and offset
+		factorXs: 0.1,           // multiplier for scrolling speed and offset
+		type: 'foreground',     // background, foreground
+		direction: 'horizontal', // vertical, horizontal
+		transition: 'transform 0.5s ease-in' // CSS transition
+	});
+	$(".paroller-left, [data-paroller-factor]").paroller({
+		factorXs: 0.1,
+		factor: -0.4,
+		factorMd: -0.4,
+		factorLg: -0.5,
+		factorXl: -0.6,
+		type: 'foreground',
+		direction: 'horizontal',
+		transition: 'transform 0.5s ease-in'
+	});
+	
+	
+	
 });
 
 /* 	Detect "transform-style: preserve-3d" support, or update csstransforms3d for IE10 ? #762
@@ -208,3 +241,50 @@ jQuery(document).ready(function($){
     document.body.removeChild(element);
 
 })();
+
+
+
+const rotateBox = basicScroll.create({
+	elem: document.querySelector('.client-item'),
+	from: 'bottom-bottom',
+	to: 'top-middle',
+	props: {
+		'--r': {
+			from: '0',
+			to: '1turn'
+		}
+	}
+})
+
+/* const fadeBox = basicScroll.create({
+	elem: document.querySelector('.fadeBox'),
+	from: 'bottom-bottom',
+	to: 'top-middle',
+	inside: (instance, percentage, props) => console.log('fadeBox is animating'),
+	outside: (instance, percentage, props) => console.log('fadeBox is not animating'),
+	props: {
+		'--o': {
+			from: .01,
+			to: .99
+		}
+	}
+}) */
+
+// Start all instances
+rotateBox.start()
+/* fadeBox.start()
+easeBoxes.forEach((easeBox) => easeBox.start()) */
+
+// Recalculate all positions and update all properties manually when the viewport size changes.
+// Debounce this function in production to avoid unnecessary calculations.
+window.onresize = function() {
+
+	rotateBox.calculate()
+	/* fadeBox.calculate()
+	easeBoxes.forEach((easeBox) => easeBox.calculate()) */
+
+	rotateBox.update()/* 
+	fadeBox.update()
+	easeBoxes.forEach((easeBox) => easeBox.update()) */
+
+}
