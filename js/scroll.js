@@ -66,6 +66,20 @@ $(window).scroll( function(){
             
         }); 
 		
+		$('.h2-effect').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},1000);
+                    
+            }
+            
+        }); 
+		
 });
 
 $(window).scroll( function(){	
@@ -185,15 +199,20 @@ jQuery(document).ready(function($){
 		});
 	}
 	$(".paroller-right, [data-paroller-factor]").paroller({
-		factor: 0.2,            // multiplier for scrolling speed and offset
-		factorXs: 0.1,           // multiplier for scrolling speed and offset
+		factor: 0.3,            // multiplier for scrolling speed and offset
+		factorXs: -0.01,           // multiplier for scrolling speed and offset
+		factorSm: -0.1,
+		factorMd: -0.2,
+		factorLg: -0.3,
+		factorXl: -0.3,
 		type: 'foreground',     // background, foreground
 		direction: 'horizontal', // vertical, horizontal
 		transition: 'transform 0.5s ease-in' // CSS transition
 	});
 	$(".paroller-left, [data-paroller-factor]").paroller({
-		factorXs: 0.1,
+		factorXs: -0.1,
 		factor: -0.4,
+		factorSm: 0.2,
 		factorMd: -0.4,
 		factorLg: -0.5,
 		factorXl: -0.6,
@@ -205,44 +224,6 @@ jQuery(document).ready(function($){
 	
 	
 });
-
-/* 	Detect "transform-style: preserve-3d" support, or update csstransforms3d for IE10 ? #762
-	https://github.com/Modernizr/Modernizr/issues/762 */
-(function getPerspective(){
-  var element = document.createElement('p'),
-      html = document.getElementsByTagName('html')[0],
-      body = document.getElementsByTagName('body')[0],
-      propertys = {
-        'webkitTransformStyle':'-webkit-transform-style',
-        'MozTransformStyle':'-moz-transform-style',
-        'msTransformStyle':'-ms-transform-style',
-        'transformStyle':'transform-style'
-      };
-
-    body.insertBefore(element, null);
-
-    for (var i in propertys) {
-        if (element.style[i] !== undefined) {
-            element.style[i] = "preserve-3d";
-        }
-    }
-
-    var st = window.getComputedStyle(element, null),
-        transform = st.getPropertyValue("-webkit-transform-style") ||
-                    st.getPropertyValue("-moz-transform-style") ||
-                    st.getPropertyValue("-ms-transform-style") ||
-                    st.getPropertyValue("transform-style");
-
-    if(transform!=='preserve-3d'){
-      html.className += ' no-preserve-3d';
-    } else {
-    	html.className += ' preserve-3d';
-    }
-    document.body.removeChild(element);
-
-})();
-
-
 
 const rotateBox = basicScroll.create({
 	elem: document.querySelector('.client-item'),

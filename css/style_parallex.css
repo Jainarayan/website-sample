@@ -88,6 +88,10 @@
 	transform: translateZ(450px);
 	left: 15.5%;
 }
+.bg-wrapper{
+	border: 1px solid red;
+	width: 20%:
+}
 .no-preserve-3d .floating-background {
   /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
   position: relative;
