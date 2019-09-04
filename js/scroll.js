@@ -30,6 +30,47 @@ $('body').scrollspy({
     target: '.navbar-fixed-top'
 })
 
+$('#linkedin').mouseover(function(){
+	$('#linkedin').attr('src', 'img/logos/social-media-in-btn-red.png');
+})
+
+$('#linkedin').mouseout(function(){
+	$('#linkedin').attr('src', 'img/logos/social-media-in-btn-blue.png');
+})
+
+$('#gmail').mouseover(function(){
+	$('#gmail').attr('src', 'img/logos/social-media-g-btn-red.png');
+})
+
+$('#gmail').mouseout(function(){
+	$('#gmail').attr('src', 'img/logos/social-media-g-btn-blue.png');
+})
+
+$('#pinterest').mouseover(function(){
+	$('#pinterest').attr('src', 'img/logos/social-media-p-btn-red.png');
+})
+
+$('#pinterest').mouseout(function(){
+	$('#pinterest').attr('src', 'img/logos/social-media-p-btn-blue.png');
+})
+
+$('#fb').mouseover(function(){
+	$('#fb').attr('src', 'img/logos/social-media-f-btn-red.png');
+})
+
+$('#fb').mouseout(function(){
+	$('#fb').attr('src', 'img/logos/social-media-f-btn-blue.png');
+})
+
+
+$('#twitter').mouseover(function(){
+	$('#twitter').attr('src', 'img/logos/social-media-t-btn-red.png');
+})
+
+$('#twitter').mouseout(function(){
+	$('#twitter').attr('src', 'img/logos/social-media-t-btn-blue.png');
+})
+
 
 /* 
             $(window).scroll(function() {
