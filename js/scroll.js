@@ -98,11 +98,6 @@ $(window).scroll( function(){
     });
 });
 	
-	
-
-
-
-	
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
@@ -210,9 +205,9 @@ jQuery(document).ready(function($){
 		transition: 'transform 0.5s ease-in' // CSS transition
 	});
 	$(".paroller-left, [data-paroller-factor]").paroller({
-		factorXs: -0.1,
+		factorXs: -0.05,
 		factor: -0.4,
-		factorSm: 0.2,
+		factorSm: 0.1,
 		factorMd: -0.4,
 		factorLg: -0.5,
 		factorXl: -0.6,
@@ -224,6 +219,42 @@ jQuery(document).ready(function($){
 	
 	
 });
+
+/* 	Detect "transform-style: preserve-3d" support, or update csstransforms3d for IE10 ? #762
+	https://github.com/Modernizr/Modernizr/issues/762 */
+(function getPerspective(){
+  var element = document.createElement('p'),
+      html = document.getElementsByTagName('html')[0],
+      body = document.getElementsByTagName('body')[0],
+      propertys = {
+        'webkitTransformStyle':'-webkit-transform-style',
+        'MozTransformStyle':'-moz-transform-style',
+        'msTransformStyle':'-ms-transform-style',
+        'transformStyle':'transform-style'
+      };
+
+    body.insertBefore(element, null);
+
+    for (var i in propertys) {
+        if (element.style[i] !== undefined) {
+            element.style[i] = "preserve-3d";
+        }
+    }
+
+    var st = window.getComputedStyle(element, null),
+        transform = st.getPropertyValue("-webkit-transform-style") ||
+                    st.getPropertyValue("-moz-transform-style") ||
+                    st.getPropertyValue("-ms-transform-style") ||
+                    st.getPropertyValue("transform-style");
+
+    if(transform!=='preserve-3d'){
+      html.className += ' no-preserve-3d';
+    } else {
+    	html.className += ' preserve-3d';
+    }
+    document.body.removeChild(element);
+
+})();
 
 const rotateBox = basicScroll.create({
 	elem: document.querySelector('.client-item'),
@@ -237,19 +268,7 @@ const rotateBox = basicScroll.create({
 	}
 })
 
-/* const fadeBox = basicScroll.create({
-	elem: document.querySelector('.fadeBox'),
-	from: 'bottom-bottom',
-	to: 'top-middle',
-	inside: (instance, percentage, props) => console.log('fadeBox is animating'),
-	outside: (instance, percentage, props) => console.log('fadeBox is not animating'),
-	props: {
-		'--o': {
-			from: .01,
-			to: .99
-		}
-	}
-}) */
+
 
 // Start all instances
 rotateBox.start()

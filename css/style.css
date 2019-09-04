@@ -243,7 +243,7 @@ hr.star-primary {
 	font: 40px;	
 }
 #Customers .index-heading{
-	margin-bottom: 0%;
+	margin: 0%;
 }
 
 /* 
@@ -327,6 +327,7 @@ hr.star-primary {
 footer {
     color: #6c6e6d;
 	width: 100vw;
+	overflow-x: hidden;
 }
 
 footer h3 {
@@ -412,9 +413,9 @@ footer .footer-below {
     text-align: center;
     width: 127%;
     margin-left: -16%;
-	height: 200px;
+	height: 118px;
     margin-bottom: 5%;
-    padding: 4%;
+    padding: 2%;
 }
 
 .page-content{
@@ -425,7 +426,6 @@ footer .footer-below {
 .page-content h2{
 	color: #fff;
     font-weight: bold;
-	margin: 4% 0;
 	font-family: Raleway;
 	font-size: 44px;
 	

@@ -4405,6 +4405,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #18bc9c;
   background-color: transparent;
 }
+.active-link {
+  color: #fff !important;
+  background-color: #e50c14 !important;
+}
 .navbar-default .navbar-text {
   color: #777777;
 }
@@ -4416,12 +4420,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #18bc9c;
   background-color: transparent;
 }
-.navbar-default .navbar-nav > .active > a,
+/* .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #ffffff;
   background-color: #1a242f;
-}
+} */
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
 .navbar-default .navbar-nav > .disabled > a:focus {
