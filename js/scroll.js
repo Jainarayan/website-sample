@@ -309,8 +309,6 @@ const rotateBox = basicScroll.create({
 	}
 })
 
-
-
 // Start all instances
 rotateBox.start()
 /* fadeBox.start()
@@ -329,3 +327,21 @@ window.onresize = function() {
 	easeBoxes.forEach((easeBox) => easeBox.update()) */
 
 }
+
+$('#subscribeButton').click(function(){
+	alert('Hi');
+	var hasError = false;
+	/* var emailReg = /^([w-.]+@([w-]+.)+[w-]{2,4})?$/; */
+	
+	
+	var subscribeVal = $("#subscribeInput").text();
+	/* alert(subscribeVal); */
+	 if(subscribeVal == '') {
+	 $("#subscribeInput").after('alert("You forgot to enter the email address to send to")');}
+	  /*   hasError = true;
+	  } else if(!emailReg.test(subscribeVal)) {
+	   $("#subscribeInput").after('<span class="error">Enter a valid email address to send to.</span>');
+	   hasError = true; 
+  }*/
+
+})
