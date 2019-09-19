@@ -107,7 +107,7 @@ $(window).scroll( function(){
             
         }); 
 		
-		$('.h2-effect').each( function(i){
+		$('.h2-effect, .showParagraph').each( function(i){
             
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -297,25 +297,6 @@ jQuery(document).ready(function($){
 
 })();
 
-const rotateBox = basicScroll.create({
-	elem: document.querySelector('.client-item'),
-	from: 'bottom-bottom',
-	to: 'top-middle',
-	props: {
-		'--r': {
-			from: '0',
-			to: '1turn'
-		}
-	}
-})
-
-// Start all instances
-rotateBox.start()
-/* fadeBox.start()
-easeBoxes.forEach((easeBox) => easeBox.start()) */
-
-// Recalculate all positions and update all properties manually when the viewport size changes.
-// Debounce this function in production to avoid unnecessary calculations.
 window.onresize = function() {
 
 	rotateBox.calculate()
