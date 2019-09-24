@@ -1,3 +1,9 @@
+window.onresize = function() {
+
+	rotateBox.calculate()
+	rotateBox.update()
+}
+
 const rotateBox = basicScroll.create({
 	elem: document.querySelector('.client-item'),
 	from: 'bottom-bottom',

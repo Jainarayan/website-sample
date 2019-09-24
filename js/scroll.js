@@ -1,30 +1,4 @@
 
-/* $(window).scroll(lazy);
-   */
-   /*  lazy();
- */
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('body').on('click', '.page-scroll a', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
-
-// Floating label headings for the contact form
-$(function() {
-    $("body").on("input propertychange", ".floating-label-form-group", function(e) {
-        $(this).toggleClass("floating-label-form-group-with-value", !! $(e.target).val());
-    }).on("focus", ".floating-label-form-group", function() {
-        $(this).addClass("floating-label-form-group-with-focus");
-    }).on("blur", ".floating-label-form-group", function() {
-        $(this).removeClass("floating-label-form-group-with-focus");
-    });
-});
-
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'
@@ -71,54 +45,33 @@ $('#twitter').mouseout(function(){
 	$('#twitter').attr('src', 'img/logos/social-media-t-btn-blue.png');
 })
 
-
-/* 
-            $(window).scroll(function() {
-                if ($(".service-content").height() <= ($(window).height() + $(window).scrollTop())) {
-                    $(".service-content").css("display","block");
-                }else {
-                    $(".service-content").css("display","none");
-                }
-            }); */
-
-
-
-/*  $(function() {
-	 $('#1').lazy({
-		bind: "event"
-	});
-	
-} */
+$("#contactButton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#contact").offset().top
+    }, 2000);
+});
 
 $(window).scroll( function(){
     
         /* Check the location of each desired element */
-        $('.service-content').each( function(i){
-            
+        $('.service-content').each( function(i){            
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             
             /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-                
-                $(this).animate({'opacity':'1'},1000);
-                    
-            }
-            
+            if( bottom_of_window > bottom_of_object ){                
+                $(this).animate({'opacity':'1'},1000);                    
+            }            
         }); 
 		
-		$('.h2-effect, .showParagraph').each( function(i){
-            
+		$('.h2-effect, .showParagraph').each( function(i){            
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             
             /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-                
-                $(this).animate({'opacity':'1'},1000);
-                    
-            }
-            
+            if( bottom_of_window > bottom_of_object ){                
+                $(this).animate({'opacity':'1'},1000);                    
+            }            
         }); 
 		
 });
@@ -182,7 +135,6 @@ jQuery(document).ready(function($){
 		});
 	});
 
-	//on resize - adjust .background-wrapper and .floating-background dimensions and position
 	$(window).on('resize', function(){
 		if( $('html').hasClass('preserve-3d') ) {
 			window.requestAnimationFrame(function(){
@@ -255,14 +207,9 @@ jQuery(document).ready(function($){
 		type: 'foreground',
 		direction: 'horizontal',
 		transition: 'transform 0.5s ease-in'
-	});
-	
-	
-	
+	});	
 });
 
-/* 	Detect "transform-style: preserve-3d" support, or update csstransforms3d for IE10 ? #762
-	https://github.com/Modernizr/Modernizr/issues/762 */
 (function getPerspective(){
   var element = document.createElement('p'),
       html = document.getElementsByTagName('html')[0],
@@ -297,32 +244,8 @@ jQuery(document).ready(function($){
 
 })();
 
-window.onresize = function() {
-
-	rotateBox.calculate()
-	/* fadeBox.calculate()
-	easeBoxes.forEach((easeBox) => easeBox.calculate()) */
-
-	rotateBox.update()/* 
-	fadeBox.update()
-	easeBoxes.forEach((easeBox) => easeBox.update()) */
-
-}
-
-$('#subscribeButton').click(function(){
-	alert('Hi');
-	var hasError = false;
-	/* var emailReg = /^([w-.]+@([w-]+.)+[w-]{2,4})?$/; */
-	
-	
-	var subscribeVal = $("#subscribeInput").text();
-	/* alert(subscribeVal); */
-	 if(subscribeVal == '') {
-	 $("#subscribeInput").after('alert("You forgot to enter the email address to send to")');}
-	  /*   hasError = true;
-	  } else if(!emailReg.test(subscribeVal)) {
-	   $("#subscribeInput").after('<span class="error">Enter a valid email address to send to.</span>');
-	   hasError = true; 
-  }*/
-
-})
+$("#button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#myDiv").offset().top
+    }, 2000);
+});
