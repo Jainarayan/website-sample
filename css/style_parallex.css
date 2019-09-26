@@ -64,6 +64,7 @@
 	transform: translateZ(400px);
 	left: 15%;
 	font-weight: bold;
+	color: #b55400;
 }
 .floating-background span:nth-child(3) {
 	font-family: Allura-Regular;
@@ -76,6 +77,8 @@
 	transform: translateZ(450px);
 	left: 15.5%;
 	z-index: 100;
+	font-weight: bold;
+	color: #b55400;
 }
 
 .bg-wrapper{
