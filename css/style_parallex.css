@@ -54,28 +54,28 @@
   transform: translateZ(50px);
 }
 .floating-background span:nth-child(2) {
-	font-family: Allura-Regular;
-	font-size: 5em;
-	position: absolute;
-	top: 57%;
-	color: #fff;
-	-webkit-transform: translateZ(400px);
-	-ms-transform: translateZ(400px);
-	transform: translateZ(400px);
-	left: 12%;
+	font-family: Gruppo-Regular;
+	font-size: 4.2em;
+    position: absolute;
+    top: 64%;
+    color: #fff;
+    -webkit-transform: translateZ(400px);
+    -ms-transform: translateZ(400px);
+    transform: translateZ(400px);
+    left: 14%;
 	font-weight: bold;
 	color: #fff;
 }
 .floating-background span:nth-child(3) {
-	font-family: Allura-Regular;
-	font-size: 4.5em;
-	position: absolute;
-	top: 73.1%;
-	color: #fff;
-	-webkit-transform: translateZ(450px);
-	-ms-transform: translateZ(450px);
-	transform: translateZ(450px);
-	left: 13.5%;
+	font-family: Gruppo-Regular;
+	font-size: 3.5em;
+    position: absolute;
+    top: 76.1%;
+    color: #fff;
+    -webkit-transform: translateZ(450px);
+    -ms-transform: translateZ(450px);
+    transform: translateZ(450px);
+    left: 14.5%;
 	z-index: 100;
 	font-weight: bold;
 	color: #fff;
@@ -142,44 +142,43 @@
     display:none !important;
 }
 
-@media (max-width: 1300px) {
+/* @media (max-width: 1300px) {
 	.floating-background span:nth-child(3) {
 		top: 74.5%;
 	}
-}
+} */
 @media (max-width: 1230px) {
 	.floating-background span:nth-child(2) {
-		top: 55%;
+		top: 64%;
 	}
-	.floating-background span:nth-child(3) {
+	/* .floating-background span:nth-child(3) {
 		top: 73.5%;
-	}
+	} */
 }
 @media (max-width: 1085px) {
 	.floating-background span:nth-child(2) {
-		top: 55%;
-		font-size: 4.2em;
+		top: 61%;
+		font-size: 3.6em;
 	}
 	.floating-background span:nth-child(3) {
-		top: 70.6%;
-		font-size: 3.5em;
+		top: 73.6%;
+		font-size: 3em;
 	}
 }
 @media (max-width: 950px) {
 	.floating-background span:nth-child(2) {
-		font-size: 3.7em;
+		font-size: 3em;
 	}
 	.floating-background span:nth-child(3){
-		font-size: 3.3em;
+		font-size: 2.8em;
 	}
 }
 @media (max-width: 768px){
 	.floating-background span:nth-child(2) {
-		font-size: 3em;
-		top: 56%;
+		font-size: 2.7em;
 	}
 	.floating-background span:nth-child(3) {
-		font-size: 2.5em;
+		font-size: 2.3em;
 	}
 }
 @media (max-width: 676px){
@@ -192,18 +191,18 @@
 }
 @media (max-width: 590px){
 	.floating-background span:nth-child(2) {
-		font-size: 2.2em;
+		font-size: 2em;
 	}
 	.floating-background span:nth-child(3) {
-		font-size: 1.8em;
+		font-size: 1.6em;
 	}
 }
 @media (max-width: 490px){
 	.floating-background span:nth-child(2) {
-		font-size: 1.8em;
+		font-size: 1.5em;
 	}
 	.floating-background span:nth-child(3) {
-		font-size: 1.5em;
+		font-size: 1.2em;
 	}
 }
 @media (max-width: 390px){

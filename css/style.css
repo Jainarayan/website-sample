@@ -5,8 +5,8 @@
 }
 
 @font-face {
-  font-family: 'Allura-Regular';
-  src: url('../fonts/Allura-Regular.woff') format('woff');
+  font-family: 'Gruppo-Regular';
+  src: url('../fonts/gruppo-v10-latin-regular.woff') format('woff');
 }
 
 @font-face {
@@ -23,6 +23,7 @@ body {
 .paragraph p, .paragraph li{
     font-size: 16px;
 	font-family: Raleway;
+	text-align: justify;
 }
 
 .col-lg-12 {
@@ -193,7 +194,11 @@ hr.star-primary {
 .service-content p{
 	font-size: 16px;
 	font-family: Raleway;
-	/* text-align: justify; */
+	text-align: justify;
+}
+h4{
+	color: #000;
+    font-family: raleway;
 }
 .service-content h3{
 	color: #e4406f;
@@ -381,22 +386,35 @@ footer .footer-below {
 	padding-bottom: 45%;
 }
 .background-heading{
-    background-color: #e50c14;
-    text-align: center;
-    width: 127%;
-    margin-left: -16%;
+    /* background-color: #e50c14; */
+   /*  text-align: center; */
+    width: 100%;
+    margin-left: -2%;
 	height: 118px;
     margin-bottom: 5%;
     padding: 2%;
 }
-
+.background-heading-subtitle{
+	width: 100%;
+    margin-left: -2%;
+    height: 86px;
+    margin-bottom: 5%;
+    padding: 2%;
+}
+.background-heading-subtitle h3{
+	font-size: 36px;
+}
+.showParagraph{
+	opacity: 0;
+	text-align: justify;
+}
 .page-content{
 	padding: 0 8%;
 	font-family: Raleway;
 }
 
 .page-content h2{
-	color: #fff;
+	color: #e50c14;
     font-weight: bold;
 	font-family: Raleway;
 	font-size: 44px;	
@@ -409,6 +427,7 @@ footer .footer-below {
 .page-content p{
 	color: #2C3E50;
     margin-bottom: 4%;
+	text-align: justify;
 }
 .page-content li{
 	color: #2C3E50;
@@ -590,33 +609,12 @@ footer .footer-below {
 	.page-content h2{
 		font-size: 30px;
 		margin-top: 38px;
-	}
-	.background-heading {
-		width: 131%;
-	}
-	
-}
-@media(max-width: 768px) {
-	.background-heading {
-		width: 128%;
-	}
-	
-}
-@media(min-width: 1024px) {
-	.background-heading {
-		width: 127.5%;
-	}
+	}	
 }
 @media(max-width: 548px) {
 	#three-line{
 		margin-top: 22px;
 	}
-}
-@media(max-width: 375px) {
-	.background-heading {
-		width: 131%;
-	}
-	
 }
 @media(max-width: 367px) {
 	.page-content h2{
